@@ -1,0 +1,12 @@
+# Dependencies and Outputs
+**/node_modules
+**/dist
+
+# Logs
+**/*.log
+
+# Secret files
+**/*.env
+
+# Mac Files
+**/.DS_Store
