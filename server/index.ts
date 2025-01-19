@@ -3,6 +3,9 @@ import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
+import apiRoutes from './src/routes/apiRoutes';  // Import the default export from apiRoutes
+import authRoutes from './src/routes/authRoutes'; // Import auth routes
+
 dotenv.config();
 
 const app = express();
@@ -21,13 +24,10 @@ mongoose.connect(mongoURI)
   .catch((err) => console.log('MongoDB connection error:', err));
 
 // Use API routes
-// Sample route for testing
-router.get('/data', (req: Request, res: Response) => {
-    res.json({ message: 'Hello from the backend!' });
-  });
+app.use('/api', apiRoutes);  // Attach the imported apiRoutes to the '/api' path
+app.use('/auth', authRoutes); // Use authentication routes
 
 // Start the server
 app.listen(port, () => {
     console.log(`Backend running on http://localhost:${port}`);
   });
-  
