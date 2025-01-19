@@ -14,7 +14,7 @@ const HomeHtml = () => {
                     <a className="navbar-brand d-md-none" href="/index.html">
                     </a>
                     <a className="navbar-brand d-md-none" href="/index.html">
-                        <span>MediSync</span>
+                        <span className="s-font">MediSync</span>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
                         aria-controls="offcanvas" aria-label="Toggle navigation">
@@ -38,10 +38,10 @@ const HomeHtml = () => {
                 </div>
             </nav>
 
-            <div className="content-container">
+            <div className="content-container-2">
                 <div>
                     <img src={logo} style={{ width: "200px", height: "200px", marginTop: "0px", marginBottom: "0px" }}></img>
-                    <h1 id="name-goes-here">Hi, Kamal</h1>
+                    <h1 id="name-goes-here" className="s-font">Hi, Kamal</h1>
                 </div>
 
                 <div className="container mb-3">
@@ -49,7 +49,7 @@ const HomeHtml = () => {
                 </div>
 
 
-                <div className="icons">
+                {/* <div className="icons">
                     <table>
                         <tbody>
                             <tr>
@@ -59,21 +59,66 @@ const HomeHtml = () => {
                             </tr>
                         </tbody>
                     </table>
+                </div> */}
+
+                <div className="row mb-4">
+                    <div className="col">
+                        <img className="img-fluid w-50" src={logo} alt="" />
+                        <i className="bi bi-person-circle h3"></i>
+                        <p className="p-font">Doctors</p>
+                    </div>
+                    <div className="col">
+                        <img className="img-fluid w-50" src={order} alt="" />
+                        <i className="bi bi-capsule h3"></i>
+                        <p className="p-font">Pharmacy</p>
+                    </div>
+                    <div className="col">
+                        <img className="img-fluid w-50" src={refill} alt="" />
+                        <i className="bi bi-building h3"></i>
+                        <p className="p-font">Hospitals</p>
+                    </div>
+                    <div className="col">
+                        <img className="img-fluid w-50" src={reminder} alt="" />
+                        <i className="bi bi-clipboard h3"></i>
+                        <p className="p-font">Insurance</p>
+                    </div>
                 </div>
 
 
                 <div className="card-container">
                     <div className="card-content">
                         <div className="card-text">
-                            <h3><b>Contact Consultant</b></h3>
+                            <h4 className="p-font"><b>Contact Consultant</b></h4>
                         </div>
                         <div className="card-details">
-                            <button className="contact-button">
-                                Contact
-                            </button>
+                            
                             <div className="card-icon">
                                 <img src={doctor} alt="Consultant Icon" />
                             </div>
+                            <button className="contact-button">
+                                Contact
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mb-4">
+                    <h5 className="h-font">Top Doctors</h5>
+                    <div className="row">
+                        <div className="col-4 text-center">
+                            <img src={doctor} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
+                            <p className="mb-0 p-font">Dr. Marco Smith</p>
+                            <small className="p-font">Cardiologist</small>
+                        </div>
+                        <div className="col-4 text-center">
+                            <img src={doctor} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
+                            <p className="mb-0 p-font">Dr. Alice Perez</p>
+                            <small className="p-font">Dermatologist</small>
+                        </div>
+                        <div className="col-4 text-center">
+                            <img src={doctor} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
+                            <p className="mb-0 p-font">Dr. John Taylor</p>
+                            <small className="p-font">Neurologist</small>
                         </div>
                     </div>
                 </div>
