@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "WellnessFont";
+    src: url("../../assets/ADAM.CGPRO.otf") format("opentype");
+}
+
+.content-container {
+    margin: 100px auto;
+    max-width: 600px;
+    border-style: solid;
+    border-color: #4a0dbc; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px #4a0dbc; 
+    padding: 20px; 
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .save-btn {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Ensures the button adjusts to the content size */
+  }
+
+  .save-btn:hover {
+    background-color: #457b9d;
+  }
+
+  button {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+
+  .text-center {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  }
+  
