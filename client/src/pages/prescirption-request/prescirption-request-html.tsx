@@ -22,8 +22,28 @@ const PrescriptionRequest = () => {
       <nav className="navbar navbar-expand-md fixed-top border-bottom" style={{ backgroundColor: "#d9d9d9" }} role="navigation">
         <div className="container">
           <a className="navbar-brand d-md-none" href="/index.html">
-            <span>MediSync</span>
           </a>
+          <a className="navbar-brand d-md-none" href="/index.html">
+            <span className="s-font">MediSync</span>
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+            aria-controls="offcanvas" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="offcanvas offcanvas-end" id="offcanvas" aria-labelledby="offcanvasLabel">
+            <div className="offcanvas-header">
+              <h5 className="offcanvas-title" id="offcanvasLabel">Menu</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body">
+              <ul className="navbar-nav flex-grow-1 justify-content-between">
+                <li className="nav-item"><a className="nav-link" href="/index.html"><span>Home</span></a></li>
+                <li className="nav-item"><a className="nav-link" href="/about.html"><span>About</span></a></li>
+                <li className="nav-item"><a className="nav-link" href="/faq.html"><span>FAQ's</span></a></li>
+                <li className="nav-item"><a className="nav-link custom-nav-link">Login</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -31,7 +51,7 @@ const PrescriptionRequest = () => {
         {/* Logo and Page Title */}
         <div>
           <img src={logo} style={{ width: "200px", height: "200px", marginTop: "0px", marginBottom: "0px" }} alt="Logo" />
-          <h1 className="text-center">Request Prescription</h1>
+          <h1 className="text-center-title">Request Prescription</h1>
         </div>
 
         {/* Consultant Information */}
@@ -88,7 +108,7 @@ const PrescriptionRequest = () => {
         </div>
 
         {/* Save Button */}
-        <div className="text-center mt-4">
+        <div>
           <button className="btn btn-primary save-btn">Save</button>
         </div>
       </div>

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "WellnessFont";
+  src: url("../../assets/ADAM.CGPRO.otf") format("opentype");
+}
+
 .content-container {
     margin: 100px auto;
     max-width: 600px;
@@ -61,5 +66,10 @@
 
   .save-btn:hover {
     background-color: #457b9d;
+  }
+
+  .text-center {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
   }
   
