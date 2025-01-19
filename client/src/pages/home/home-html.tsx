@@ -1,12 +1,23 @@
 // HomeHtml.tsx
+import { useNavigate } from "react-router-dom";
 import refill from "../../assets/refill.png";
 import reminder from "../../assets/reminder.png";
-import order from "../../assets/order.png"
-import logo from "../../assets/logo2.png"
-import doctor from "../../assets/doctor.png"
+import order from "../../assets/order.png";
+import logo from "../../assets/logo2.png";
+import doctor from "../../assets/doctor.png";
+import doctor2 from "../../assets/doctor2.png";
+import doctor3 from "../../assets/doctor3.png";
+import history from "../../assets/order-history.png";
 import './home.css';
 
 const HomeHtml = () => {
+
+    const navigate = useNavigate();
+
+    const handleRedirect = (path: string) => {
+        navigate(path);
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-md fixed-top border-bottom" style={{ backgroundColor: "#d9d9d9" }} role="navigation">
@@ -29,7 +40,6 @@ const HomeHtml = () => {
                             <ul className="navbar-nav flex-grow-1 justify-content-between">
                                 <li className="nav-item"><a className="nav-link" href="/index.html"><span>Home</span></a></li>
                                 <li className="nav-item"><a className="nav-link" href="/about.html"><span>About</span></a></li>
-                                {/* <a href="/index.html"><img className="bi1" width="40" height="40" src="../images/MentalWellnessLogo.png" /></a> */}
                                 <li className="nav-item"><a className="nav-link" href="/faq.html"><span>FAQ's</span></a></li>
                                 <li className="nav-item"><a className="nav-link custom-nav-link">Login</a></li>
                             </ul>
@@ -48,57 +58,43 @@ const HomeHtml = () => {
                     <input className="form-control me-2 custom-rounded" type="search" placeholder="Search" aria-label="Search" />
                 </div>
 
-
-                {/* <div className="icons">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td className="icon-cell"><img src={order} style={{ width: "60px", height: "60px" }} alt="Order Icon" /></td>
-                                <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
-                                <td className="icon-cell"><img src={reminder} style={{ width: "60px", height: "60px" }} alt="Reminder Icon" /></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> */}
-
                 <div className="row mb-4">
-                    <div className="col">
-                        <img className="img-fluid w-50" src={logo} alt="" />
-                        <i className="bi bi-person-circle h3"></i>
-                        <p className="p-font">Doctors</p>
+                    <div className="col clickable-image" onClick={() => handleRedirect("/view-prescription")} style={{ cursor: "pointer" }}>
+                        <div className="icon-circle">
+                            <img src={history} alt="View Orders" />
+                        </div>
+                        <p className="p-font">View Orders</p>
                     </div>
-                    <div className="col">
-                        <img className="img-fluid w-50" src={order} alt="" />
-                        <i className="bi bi-capsule h3"></i>
-                        <p className="p-font">Pharmacy</p>
+                    <div className="col clickable-image" onClick={() => handleRedirect("/prescription-request")} style={{ cursor: "pointer" }}>
+                        <div className="icon-circle">
+                            <img src={order} alt="Send Order" />
+                        </div>
+                        <p className="p-font">Send Order</p>
                     </div>
-                    <div className="col">
-                        <img className="img-fluid w-50" src={refill} alt="" />
-                        <i className="bi bi-building h3"></i>
-                        <p className="p-font">Hospitals</p>
+                    <div className="col clickable-image" onClick={() => handleRedirect("/")} style={{ cursor: "pointer" }}>
+                        <div className="icon-circle">
+                            <img src={refill} alt="Refill Alerts" />
+                        </div>
+                        <p className="p-font">Refill Alerts</p>
                     </div>
-                    <div className="col">
-                        <img className="img-fluid w-50" src={reminder} alt="" />
-                        <i className="bi bi-clipboard h3"></i>
-                        <p className="p-font">Insurance</p>
+                    <div className="col clickable-image" onClick={() => handleRedirect("/medicine-input")} style={{ cursor: "pointer" }}>
+                        <div className="icon-circle">
+                            <img src={reminder} alt="Reminders" />
+                        </div>
+                        <p className="p-font">Reminders</p>
                     </div>
                 </div>
 
 
+
                 <div className="card-container">
-                    <div className="card-content">
-                        <div className="card-text">
-                            <h4 className="p-font"><b>Contact Consultant</b></h4>
-                        </div>
-                        <div className="card-details">
-                            
-                            <div className="card-icon">
-                                <img src={doctor} alt="Consultant Icon" />
-                            </div>
-                            <button className="contact-button">
-                                Contact
-                            </button>
-                        </div>
+                    <div className="card-text">
+                        <h3><b>Your Consultant</b></h3>
+                        <p>Name: James Smith</p>
+                        <p>Location: UBC</p>
+                    </div>
+                    <div className="card-icon">
+                        <img className="clickable-image" src={doctor} alt="Consultant Icon" />
                     </div>
                 </div>
 
@@ -111,12 +107,12 @@ const HomeHtml = () => {
                             <small className="p-font">Cardiologist</small>
                         </div>
                         <div className="col-4 text-center">
-                            <img src={doctor} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
+                            <img src={doctor3} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
                             <p className="mb-0 p-font">Dr. Alice Perez</p>
                             <small className="p-font">Dermatologist</small>
                         </div>
                         <div className="col-4 text-center">
-                            <img src={doctor} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
+                            <img src={doctor2} className="img-fluid w-50 rounded-circle mb-2" alt="Doctor" />
                             <p className="mb-0 p-font">Dr. John Taylor</p>
                             <small className="p-font">Neurologist</small>
                         </div>
