@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LogoVideo from "../../assets/logo-vid.mp4";
 import Order from "../../assets/order.png";
 import Refill from "../../assets/refill.png";
@@ -20,14 +21,29 @@ const LandHtml = () => {
                     />
                     <h2><b>Welcome!</b></h2>
                     <p>Synchronize your health.</p>
-                    <button style={{ backgroundColor: "#5e17eb", color: "white", border: "none", borderRadius: "8px", padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}>
-                        Login
-                    </button>
+                    <Link to="/login">
+                        <button
+                            style={{
+                                backgroundColor: "#5e17eb",
+                                color: "white",
+                                border: "none",
+                                borderRadius: "8px",
+                                padding: "10px 20px",
+                                fontSize: "16px",
+                                cursor: "pointer",
+                            }}
+                        >
+                            Login
+                        </button>
+                    </Link>
                 </div>
 
-                <div className="scroll-icon" style={{ marginTop: "20px" }} onClick={() =>
-                    document.getElementById("info")?.scrollIntoView({ behavior: "smooth" })
-                }
+                <div
+                    className="scroll-icon"
+                    style={{ marginTop: "20px" }}
+                    onClick={() =>
+                        document.getElementById("info")?.scrollIntoView({ behavior: "smooth" })
+                    }
                 >
                     &#x25BC;
                 </div>
