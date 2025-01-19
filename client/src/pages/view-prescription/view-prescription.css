@@ -60,23 +60,7 @@
     max-height: 500px; /* Large enough to fit content */
     opacity: 1;
   }
-  
-  .edit-btn {
-    background-color: #4a0dbc; /* Matches the Save button */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
-    box-shadow: 0 4px 10px rgba(74, 13, 188, 0.2); /* Subtle shadow for depth */
-  }
-  
-  .edit-btn:hover {
-    background-color: #360a8b; /* Slightly darker shade for hover effect */
-    box-shadow: 0 4px 15px rgba(74, 13, 188, 0.4); /* Enhanced shadow on hover */
-  }
+
   
 /* Cross-circle button */
 .cross-circle-btn {
@@ -111,4 +95,42 @@
   .cross-circle-btn:hover::after {
     color: #ffffff; /* White plus on hover */
   }
+    
+  .edit-btn,
+  .delete-btn {
+    background-color: #4a0dbc; /* Default background for edit */
+    color: #ffffff; /* White text for both */
+    padding: 6px 12px; /* Reduced padding for smaller size */
+    width: 52%; /* Fixed width for consistency */
+    height: 36px; /* Fixed height for consistency */
+    text-align: center; /* Ensure text is centered */
+    border: none; /* Remove any borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 3px 8px rgba(74, 13, 188, 0.2); /* Subtle shadow */
+  }
   
+  .edit-btn:hover {
+    background-color: #360a8b; /* Darker shade on hover */
+    box-shadow: 0 4px 12px rgba(74, 13, 188, 0.4);
+  }
+  
+  .delete-btn {
+    background-color: #ffffff; /* White background for delete */
+    color: #4a0dbc; /* Purple text */
+    border: 2px solid #4a0dbc; /* Purple border */
+  }
+  
+  .delete-btn:hover {
+    background-color: #360a8b; /* Darker shade on hover */
+    color: #ffffff; /* White text on hover */
+    box-shadow: 0 4px 12px rgba(74, 13, 188, 0.4);
+  }
+  
+.button-group {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center-align the buttons */
+  margin-top: 10px; /* Space above the buttons */
+}
