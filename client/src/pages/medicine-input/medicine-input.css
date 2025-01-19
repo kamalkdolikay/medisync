@@ -1,0 +1,60 @@
+.container {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .save-btn {
+    background-color: #1d3557;
+    color: #f1faee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Ensures the button adjusts to the content size */
+  }
+  
+
+  .save-btn:hover {
+    background-color: #457b9d;
+  }
+  
