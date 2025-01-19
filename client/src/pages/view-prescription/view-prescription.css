@@ -21,30 +21,44 @@
     height: auto;
     border: 1px solid #4a0dbc;
     border-radius: 8px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Align text centrally */
   }
   
   .prescription-title {
     font-size: 1.2rem;
     font-weight: bold;
     color: #1d3557;
-    padding: 10px;
   }
   
-  .prescription-details {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
   
   .prescription-details p {
     margin: 5px 0;
     font-size: 1rem;
     color: #333;
+  }
+  
+  /* Smooth expand/collapse animations */
+.prescription-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .prescription-details.expanded {
+    max-height: 500px; /* Large enough to fit content */
+    opacity: 1;
   }
   
   .edit-btn {
@@ -64,4 +78,37 @@
     box-shadow: 0 4px 15px rgba(74, 13, 188, 0.4); /* Enhanced shadow on hover */
   }
   
+/* Cross-circle button */
+.cross-circle-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4a0dbc; /* Circle border */
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; /* Center the button horizontally */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 13, 188, 0.2);
+  }
+  
+  .cross-circle-btn:hover {
+    background-color: #4a0dbc; /* Purple background on hover */
+    color: #ffffff; /* White plus on hover */
+    box-shadow: 0 4px 15px rgba(74, 13, 188, 0.4);
+  }
+  
+  .cross-circle-btn::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a0dbc; /* Purple plus */
+    transition: color 0.3s ease;
+  }
+  
+  .cross-circle-btn:hover::after {
+    color: #ffffff; /* White plus on hover */
+  }
   

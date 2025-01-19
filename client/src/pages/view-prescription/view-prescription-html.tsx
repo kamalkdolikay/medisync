@@ -12,7 +12,6 @@ const ViewPrescription = () => {
     Hydrocodone: false,
   });
 
-  // Toggle expand/collapse for a prescription
   const toggleExpand = (name: string) => {
     setExpanded((prev) => ({
       ...prev,
@@ -20,7 +19,6 @@ const ViewPrescription = () => {
     }));
   };
 
-  // Handle edit button click
   const handleEdit = (prescriptionName: string) => {
     Swal.fire({
       title: `Edit ${prescriptionName}`,
@@ -32,9 +30,24 @@ const ViewPrescription = () => {
     });
   };
 
+  const handleCrossCircleClick = () => {
+    Swal.fire({
+      title: "Add New Prescription",
+      text: "Redirecting to the add prescription page...",
+      icon: "info",
+      confirmButtonText: "Okay",
+    }).then(() => {
+      navigate("/add-prescription");
+    });
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-md fixed-top border-bottom" style={{ backgroundColor: "#d9d9d9" }} role="navigation">
+      <nav
+        className="navbar navbar-expand-md fixed-top border-bottom"
+        style={{ backgroundColor: "#d9d9d9" }}
+        role="navigation"
+      >
         <div className="container">
           <a className="navbar-brand" href="/index.html">
             <span>MediSync</span>
@@ -53,23 +66,25 @@ const ViewPrescription = () => {
           >
             Amoxicillin
           </div>
-          {expanded.Amoxicillin && (
-            <div className="prescription-details">
-              <p>Total in hand: 200</p>
-              <p>Refill alert amount: 50</p>
-              <p>How many times a day: 3</p>
-              <p>How many pills one time: 2</p>
-              <p>Time 1: 07:00</p>
-              <p>Time 2: 12:00</p>
-              <p>Time 3: 17:00</p>
-              <button
-                className="edit-btn"
-                onClick={() => handleEdit("Amoxicillin")}
-              >
-                Edit
-              </button>
-            </div>
-          )}
+          <div
+            className={`prescription-details ${
+              expanded.Amoxicillin ? "expanded" : ""
+            }`}
+          >
+            <p>Total in hand: 200</p>
+            <p>Refill alert amount: 50</p>
+            <p>Times per day: 3</p>
+            <p>Pills per time: 2</p>
+            <p>Time 1: 07:00</p>
+            <p>Time 2: 12:00</p>
+            <p>Time 3: 17:00</p>
+            <button
+              className="edit-btn"
+              onClick={() => handleEdit("Amoxicillin")}
+            >
+              Edit
+            </button>
+          </div>
         </div>
 
         {/* Prescription Box: Hydrocodone */}
@@ -80,22 +95,32 @@ const ViewPrescription = () => {
           >
             Hydrocodone
           </div>
-          {expanded.Hydrocodone && (
-            <div className="prescription-details">
-              <p>Total in hand: 100</p>
-              <p>Refill alert amount: 50</p>
-              <p>How many times a day: 2</p>
-              <p>How many pills one time: 2</p>
-              <p>Time 1: 07:00</p>
-              <p>Time 2: 17:00</p>
-              <button
-                className="edit-btn"
-                onClick={() => handleEdit("Hydrocodone")}
-              >
-                Edit
-              </button>
-            </div>
-          )}
+          <div
+            className={`prescription-details ${
+              expanded.Hydrocodone ? "expanded" : ""
+            }`}
+          >
+            <p>Total in hand: 100</p>
+            <p>Refill alert amount: 50</p>
+            <p>Times per day: 2</p>
+            <p>Pills per time: 2</p>
+            <p>Time 1: 07:00</p>
+            <p>Time 2: 17:00</p>
+            <button
+              className="edit-btn"
+              onClick={() => handleEdit("Hydrocodone")}
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+
+        {/* Cross-circle button under Hydrocodone */}
+        <div className="text-center">
+          <button
+            className="cross-circle-btn"
+            onClick={handleCrossCircleClick}
+          ></button>
         </div>
       </div>
     </>
