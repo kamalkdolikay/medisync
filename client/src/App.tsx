@@ -1,5 +1,5 @@
 // App.tsx
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Importing page components
 import HomeComponent from "./pages/home/home-component";
