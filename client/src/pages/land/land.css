@@ -1,0 +1,135 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  font-family: Arial, sans-serif; /* Default font */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+div {
+  text-align: center; /* Centers text within divs */
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Space below the video */
+  border-radius: 10px; /* Optional: Add rounded corners to the video */
+}
+
+/* Button Styles */
+button {
+  background-color: #5e17eb; /* Primary purple color */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for spacing */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #4a0dbc; /* Darker purple on hover */
+}
+
+/* Typography */
+h2 {
+  font-size: 2rem;
+  color: #505050; /* Gray text */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #505050; /* Gray text */
+  margin: 20px 0;
+}
+
+/* Scroll Icon */
+.scroll-icon {
+  font-size: 2rem; /* Adjust size for visibility */
+  color: #5e17eb; /* Match app theme */
+  display: inline-block;
+  animation: bounce 1.5s infinite; /* Bounce animation */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  margin-top: 20px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+      transform: translateY(10px); /* Move down slightly */
+  }
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.info {
+  /* max-width: 800px; Constrain width */
+  text-align: center;
+  margin: 40px 0; /* Space between sections */
+}
+
+.info img {
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+  margin: 20px 0; /* Space around images */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 1.5rem; /* Adjust font size for tablets */
+  }
+
+  p {
+      font-size: 0.9rem; /* Adjust font size for tablets */
+  }
+
+  .info img {
+      width: 150px; /* Smaller images for tablets */
+  }
+
+  .scroll-icon {
+      font-size: 1.5rem; /* Adjust size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.2rem; /* Smaller font size for phones */
+  }
+
+  p {
+      font-size: 0.8rem; /* Smaller font size for phones */
+  }
+
+  .info img {
+      width: 120px; /* Smaller images for phones */
+  }
+
+  button {
+      padding: 8px 16px; /* Reduce padding for smaller screens */
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .scroll-icon {
+      font-size: 1.2rem; /* Adjust size for phones */
+  }
+}
