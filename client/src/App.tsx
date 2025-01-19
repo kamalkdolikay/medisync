@@ -10,6 +10,7 @@ import MedicineInputComponent from './pages/medicine-input/medicine-input-compon
 import LandComponent from "./pages/land/land-component"; 
 import PrescriptionRequest from './pages/prescirption-request/prescirption-request-html';
 import ViewPrescription from './pages/view-prescription/view-prescription-html';
+import AboutComponent from './pages/about-us/about-us-component';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path='/medicine-input' element={<MedicineInputComponent/>} />
             <Route path='/prescription-request' element={<PrescriptionRequest/>} />
             <Route path='/view-prescription' element={<ViewPrescription/>} />
+            <Route path='/about-us' element={<AboutComponent />} />
         </Routes>
       </Router>
     </AuthProvider>
