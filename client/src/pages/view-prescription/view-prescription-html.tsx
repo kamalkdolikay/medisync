@@ -37,7 +37,7 @@ const ViewPrescription = () => {
       icon: "info",
       confirmButtonText: "Okay",
     }).then(() => {
-      navigate("/add-prescription");
+      navigate("/medicine-input");
     });
   };
 
