@@ -1,5 +1,8 @@
 // App.tsx
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
 
 // Importing page components
 import HomeComponent from "./pages/home/home-component";
@@ -8,7 +11,8 @@ import LandComponent from "./pages/land/land-component";
 
 const App = () => {
   return (
-    <Router>
+    <AuthProvider>
+        <Router>
         <Routes>
             {/* Unprotected routes */}
             <Route path='/dashboard' element={<HomeComponent />} />
@@ -16,6 +20,8 @@ const App = () => {
             <Route path='/medicine-input' element={<MedicineInputComponent/>} />
         </Routes>
     </Router>
+    </AuthProvider>
+    
   )
 }
 
