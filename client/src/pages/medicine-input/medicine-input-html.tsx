@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import Swal from 'sweetalert2'; 
+import { useNavigate } from 'react-router-dom'; 
 import "./medicine-input.css";
 
 const MedicineInput = () => {
+  const navigate = useNavigate(); 
   const [timesPerDay, setTimesPerDay] = useState(0); // State for "How many times a day?"
   const [timeInputs, setTimeInputs] = useState<string[]>([]); // State for time inputs
   const [pillsPerTime, setPillsPerTime] = useState(1); // State for "How many pills one time?"
@@ -29,15 +32,25 @@ const MedicineInput = () => {
     setTimeInputs(updatedInputs);
   };
 
-  const handleSave = () => {
+  const handleSave = () => { 
     // Logic for saving the data
-    alert("Medication details saved successfully!");
+    // alert("Medication details saved successfully!");
+    Swal.fire({
+      title: 'Reminder Set!', 
+      text: "Your reminder has been added successfully.",
+      icon: 'success',
+      confirmButtonText: 'Okay',
+      allowOutsideClick: false, 
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/dashboard'); 
+      }
+    });
   };
 
+
   return (
-
     <>
-
       <nav className="navbar navbar-expand-md fixed-top border-bottom" style={{ backgroundColor: "#d9d9d9" }} role="navigation">
         <div className="container">
           <a className="navbar-brand d-md-none" href="/index.html">
