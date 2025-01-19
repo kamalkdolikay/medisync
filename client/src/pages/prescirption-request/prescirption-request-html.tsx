@@ -109,7 +109,7 @@ const PrescriptionRequest = () => {
 
         {/* Save Button */}
         <div>
-          <button className="btn btn-primary save-btn">Save</button>
+          <button className="text-center">Save</button>
         </div>
       </div>
     </>
