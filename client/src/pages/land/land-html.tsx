@@ -1,4 +1,4 @@
-import LogoVideo from "../../assets/logo-video.mp4";
+import LogoVideo from "../../assets/logo-vid.mp4";
 import Order from "../../assets/order.png";
 import Refill from "../../assets/refill.png";
 import Reminder from "../../assets/reminder.png";
@@ -7,31 +7,33 @@ import "./land.css";
 const LandHtml = () => {
     return (
         <div style={{ overflowY: "scroll", height: "100vh" }}>
-            <div style={{ textAlign: "center", padding: "20px" }}>
-                <video
-                    src={LogoVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ width: "400px", height: "400px" }}
-                    aria-label="App Logo Animation"
-                />
-                <h2><b>Welcome!</b></h2>
-                <p>Synchronize your health.</p>
-                <button style={{ backgroundColor: "#5e17eb", color: "white", border: "none", borderRadius: "8px", padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}>
-                    Login
-                </button>
+            <div className="logo-container">
+                <div style={{ textAlign: "center", padding: "20px" }}>
+                    <video
+                        src={LogoVideo}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ width: "400px", height: "400px" }}
+                        aria-label="App Logo Animation"
+                    />
+                    <h2><b>Welcome!</b></h2>
+                    <p>Synchronize your health.</p>
+                    <button style={{ backgroundColor: "#5e17eb", color: "white", border: "none", borderRadius: "8px", padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}>
+                        Login
+                    </button>
+                </div>
+
+                <div className="scroll-icon" style={{ marginTop: "20px" }} onClick={() =>
+                    document.getElementById("info")?.scrollIntoView({ behavior: "smooth" })
+                }
+                >
+                    &#x25BC;
+                </div>
             </div>
 
-            <div className="scroll-icon" style={{marginTop: "20px"}}onClick={() => 
-                document.getElementById("info")?.scrollIntoView({behavior: "smooth"})
-            }
-            >
-              &#x25BC;
-            </div>
-
-            <div className="info-section" style={{marginTop: "50px"}}>
+            <div className="info-section" style={{ marginTop: "50px" }}>
                 <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Order Prescription Refills</b></h2>
                     <img src={Order} style={{ width: "170px", height: "170px" }} />
@@ -40,7 +42,7 @@ const LandHtml = () => {
                     </p>
                 </div>
 
-                <div className="info"  style={{ padding: "20px", margin: "40px 0" }}>
+                <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Get Timely Reminders</b></h2>
                     <img src={Reminder} style={{ width: "170px", height: "170px" }} />
                     <p>
@@ -48,7 +50,7 @@ const LandHtml = () => {
                     </p>
                 </div>
 
-                <div className="info"  style={{ padding: "20px", margin: "40px 0" }}>
+                <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Refill Alerts</b></h2>
                     <img src={Refill} style={{ width: "170px", height: "170px" }} />
                     <p>
