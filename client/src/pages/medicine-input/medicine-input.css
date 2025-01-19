@@ -1,6 +1,11 @@
-.container {
-    margin: 20px auto;
+.content-container {
+    margin: 100px auto;
     max-width: 600px;
+    border-style: solid;
+    border-color: #4a0dbc; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px #4a0dbc; 
+    padding: 20px; 
   }
   
   h2 {
