@@ -12,14 +12,14 @@ import LandComponent from "./pages/land/land-component";
 const App = () => {
   return (
     <AuthProvider>
-        <Router>
+      <Router>
         <Routes>
             {/* Unprotected routes */}
             <Route path='/dashboard' element={<HomeComponent />} />
             <Route path='/' element={<LandComponent />} />
             <Route path='/medicine-input' element={<MedicineInputComponent/>} />
         </Routes>
-    </Router>
+      </Router>
     </AuthProvider>
     
   )

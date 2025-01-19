@@ -12,7 +12,6 @@ const HomeHtml = () => {
             <nav className="navbar navbar-expand-md fixed-top border-bottom" style={{ backgroundColor: "#d9d9d9" }} role="navigation">
                 <div className="container">
                     <a className="navbar-brand d-md-none" href="/index.html">
-                        {/* <img className="bi" width="35" height="35" src="../images/MentalWellnessLogo.png" /> */}
                     </a>
                     <a className="navbar-brand d-md-none" href="/index.html">
                         <span>MediSync</span>
@@ -39,46 +38,47 @@ const HomeHtml = () => {
                 </div>
             </nav>
 
-            <div>
-                <img src={logo} style={{ width: "200px", height: "200px", marginTop: "0px", marginBottom: "0px" }}></img>
-                <h1 id="name-goes-here">Hi, Kamal</h1>
-            </div>
+            <div className="body-container">
+                <div>
+                    <img src={logo} style={{ width: "200px", height: "200px", marginTop: "0px", marginBottom: "0px" }}></img>
+                    <h1 id="name-goes-here">Hi, Kamal</h1>
+                </div>
 
-            <div className="container mb-3">
-                <input className="form-control me-2 custom-rounded" type="search" placeholder="Search" aria-label="Search" />
-            </div>
-
-
-            <div className="icons">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td className="icon-cell"><img src={order} style={{ width: "60px", height: "60px" }} alt="Order Icon" /></td>
-                            <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
-                            <td className="icon-cell"><img src={reminder} style={{ width: "60px", height: "60px" }} alt="Reminder Icon" /></td>
-                            <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
+                <div className="container mb-3">
+                    <input className="form-control me-2 custom-rounded" type="search" placeholder="Search" aria-label="Search" />
+                </div>
 
 
-            <div className="card-container">
-                <div className="card-content">
-                    <div className="card-text">
-                        <h3><b>Contact Consultant</b></h3>
-                    </div>
-                    <div className="card-details">
-                        <button className="contact-button">
-                            Contact
-                        </button>
-                        <div className="card-icon">
-                            <img src={doctor} alt="Consultant Icon" />
+                <div className="icons">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td className="icon-cell"><img src={order} style={{ width: "60px", height: "60px" }} alt="Order Icon" /></td>
+                                <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
+                                <td className="icon-cell"><img src={reminder} style={{ width: "60px", height: "60px" }} alt="Reminder Icon" /></td>
+                                <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div className="card-container">
+                    <div className="card-content">
+                        <div className="card-text">
+                            <h3><b>Contact Consultant</b></h3>
+                        </div>
+                        <div className="card-details">
+                            <button className="contact-button">
+                                Contact
+                            </button>
+                            <div className="card-icon">
+                                <img src={doctor} alt="Consultant Icon" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </>
     );
 };
