@@ -38,7 +38,7 @@ const HomeHtml = () => {
                 </div>
             </nav>
 
-            <div className="body-container">
+            <div className="content-container">
                 <div>
                     <img src={logo} style={{ width: "200px", height: "200px", marginTop: "0px", marginBottom: "0px" }}></img>
                     <h1 id="name-goes-here">Hi, Kamal</h1>
@@ -56,7 +56,6 @@ const HomeHtml = () => {
                                 <td className="icon-cell"><img src={order} style={{ width: "60px", height: "60px" }} alt="Order Icon" /></td>
                                 <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
                                 <td className="icon-cell"><img src={reminder} style={{ width: "60px", height: "60px" }} alt="Reminder Icon" /></td>
-                                <td className="icon-cell"><img src={refill} style={{ width: "60px", height: "60px" }} alt="Refill Icon" /></td>
                             </tr>
                         </tbody>
                     </table>
