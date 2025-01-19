@@ -62,16 +62,20 @@ p {
   margin-left: 25px;
   margin-right: 25px; 
   margin-top: 30px; 
+
+    /* Center horizontally */
+    margin: 30px auto; /* Auto margin horizontally and 30px from the top */
+    text-align: justify; /* Justifies text inside the container */
 }
 
 /* Scroll Icon */
 .scroll-icon {
   font-size: 2rem; /* Adjust size for visibility */
   color: #5e17eb; /* Match app theme */
-  display: inline-block;
+  display: block; /* Ensures it acts like a block-level element */
+  margin: 20px auto; /* Horizontally centers the icon */
   animation: bounce 1.5s infinite; /* Bounce animation */
   cursor: pointer; /* Pointer cursor for interactivity */
-  margin-top: 20px;
 }
 
 /* Bounce Animation */
