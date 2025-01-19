@@ -13,6 +13,26 @@
   
 }
 
+.icon-circle {
+  width: 70px; /* Adjust the size of the circle */
+  height: 70px;
+  border: 2px solid #4a0dbc; /* Purple border */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Centers the circle in its column */
+  background-color: transparent; /* Transparent background */
+}
+
+.icon-circle img {
+  width: 40%; /* Adjust the size of the icon inside the circle */
+  height: 40%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(22%) sepia(73%) saturate(660%) hue-rotate(243deg) brightness(92%) contrast(96%); /* Purple tint */
+}
+
+
 .content-container-2 {
     margin: 100px;
     max-width: 600px;
@@ -21,6 +41,15 @@
     border-radius: 15px; 
     box-shadow: 0 4px 10px #4a0dbc; 
     padding: 20px; 
+  }
+
+  .clickable-image {
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
+  }
+
+  .clickable-image:hover {
+    transform: scale(1.1); 
   }
 
 .custom-rounded {
