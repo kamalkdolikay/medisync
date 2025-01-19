@@ -51,6 +51,19 @@ p {
   margin: 20px 0;
 }
 
+.logo-container {
+  /* margin: 100px auto; */
+  max-width: 500px;
+  border-style: solid;
+  border-color: #4a0dbc; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px #4a0dbc; 
+  padding: 20px; 
+  margin-left: 25px;
+  margin-right: 25px; 
+  margin-top: 30px; 
+}
+
 /* Scroll Icon */
 .scroll-icon {
   font-size: 2rem; /* Adjust size for visibility */

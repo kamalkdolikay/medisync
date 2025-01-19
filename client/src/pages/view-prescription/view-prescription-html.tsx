@@ -30,6 +30,23 @@ const ViewPrescription = () => {
     });
   };
 
+  const handleDelete = (prescriptionName: string) => {
+    Swal.fire({
+      title: `Are you sure you want to delete ${prescriptionName}?`,
+      text: "This action cannot be undone!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", `${prescriptionName} has been deleted.`, "success");
+        // Add logic here to delete the prescription
+      }
+    });
+  };
+
+
   const handleCrossCircleClick = () => {
     Swal.fire({
       title: "Add New Prescription",
@@ -67,9 +84,8 @@ const ViewPrescription = () => {
             Amoxicillin
           </div>
           <div
-            className={`prescription-details ${
-              expanded.Amoxicillin ? "expanded" : ""
-            }`}
+            className={`prescription-details ${expanded.Amoxicillin ? "expanded" : ""
+              }`}
           >
             <p>Total in hand: 200</p>
             <p>Refill alert amount: 50</p>
@@ -78,12 +94,20 @@ const ViewPrescription = () => {
             <p>Time 1: 07:00</p>
             <p>Time 2: 12:00</p>
             <p>Time 3: 17:00</p>
-            <button
-              className="edit-btn"
-              onClick={() => handleEdit("Amoxicillin")}
-            >
-              Edit
-            </button>
+            <div className="button-group">
+              <button
+                className="edit-btn"
+                onClick={() => handleEdit("Amoxicillin")}
+              >
+                Edit
+              </button>
+              <button
+                className="delete-btn"
+                onClick={() => handleDelete("Amoxicillin")}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
 
@@ -96,9 +120,8 @@ const ViewPrescription = () => {
             Hydrocodone
           </div>
           <div
-            className={`prescription-details ${
-              expanded.Hydrocodone ? "expanded" : ""
-            }`}
+            className={`prescription-details ${expanded.Hydrocodone ? "expanded" : ""
+              }`}
           >
             <p>Total in hand: 100</p>
             <p>Refill alert amount: 50</p>
@@ -106,12 +129,20 @@ const ViewPrescription = () => {
             <p>Pills per time: 2</p>
             <p>Time 1: 07:00</p>
             <p>Time 2: 17:00</p>
-            <button
-              className="edit-btn"
-              onClick={() => handleEdit("Hydrocodone")}
-            >
-              Edit
-            </button>
+            <div className="button-group">
+              <button
+                className="edit-btn"
+                onClick={() => handleEdit("Amoxicillin")}
+              >
+                Edit
+              </button>
+              <button
+                className="delete-btn"
+                onClick={() => handleDelete("Amoxicillin")}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
 
