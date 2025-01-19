@@ -1,0 +1,63 @@
+/* Styles for centering the content */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+    background-color: white; /* Optional: Set a background color */
+}
+
+div {
+    text-align: center; /* Centers text within the div */
+}
+
+img {
+    margin-bottom: 20px; /* Adds spacing below the logo */
+}
+
+button {
+    background-color: #5e17eb; /* Purple color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for better appearance */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  button:hover {
+    background-color: #4a0dbc; /* Darker purple for hover effect */
+  }
+
+  h2, p {
+    color: #505050
+  }
+
+  .scroll-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #5e17eb; /* Matches the app's purple theme */
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Start at original position */
+    }
+    50% {
+      transform: translateY(10px); /* Move down slightly */
+    }
+  }
+  
+
+  
+  
+  
+
+
+  

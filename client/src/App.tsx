@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 
 // Importing page components
 import HomeComponent from "./pages/home/home-component";
+import LandComponent from "./pages/land/land-component"; 
 
 const App = () => {
   return (
     <Router>
         <Routes>
             {/* Unprotected routes */}
-            <Route path='/' element={<HomeComponent />} />
+            <Route path='/dashboard' element={<HomeComponent />} />
+            <Route path='/' element={<LandComponent />} />
         </Routes>
     </Router>
   )
