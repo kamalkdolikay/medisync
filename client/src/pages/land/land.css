@@ -150,3 +150,8 @@ p {
       font-size: 1.2rem; /* Adjust size for phones */
   }
 }
+
+.p3-font {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}

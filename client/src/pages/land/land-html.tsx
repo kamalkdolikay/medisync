@@ -20,7 +20,7 @@ const LandHtml = () => {
                         aria-label="App Logo Animation"
                     />
                     <h2><b>Welcome!</b></h2>
-                    <p>Synchronize your health.</p>
+                    <p className="p3-font">Synchronize your health.</p>
                     <Link to="/login">
                         <button
                             style={{
@@ -31,6 +31,7 @@ const LandHtml = () => {
                                 padding: "10px 20px",
                                 fontSize: "16px",
                                 cursor: "pointer",
+                                fontFamily: "Segoe UI"
                             }}
                         >
                             Login
@@ -53,7 +54,7 @@ const LandHtml = () => {
                 <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Order Prescription Refills</b></h2>
                     <img src={Order} style={{ width: "170px", height: "170px" }} />
-                    <p>
+                    <p className="p3-font">
                         Effortlessly manage your prescriptions by sending refill requests directly to your pharmacy in just a few taps. Avoid the hassle of missed dosages with automatic refill tracking and alerts, ensuring that your medication is always ready when you need it. With MediSync, you stay in control of your health while saving time and effort.
                     </p>
                 </div>
@@ -61,7 +62,7 @@ const LandHtml = () => {
                 <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Get Timely Reminders</b></h2>
                     <img src={Reminder} style={{ width: "170px", height: "170px" }} />
-                    <p>
+                    <p className="p3-font">
                         Take control of your health with personalized medicine reminders tailored to your schedule. Never miss a dose with timely alerts that keep you on track, whether it’s daily medication, weekly supplements, or occasional prescriptions. MediSync ensures you stay consistent and organized, empowering you to maintain your well-being effortlessly.
                     </p>
                 </div>
@@ -69,7 +70,7 @@ const LandHtml = () => {
                 <div className="info" style={{ padding: "20px", margin: "40px 0" }}>
                     <h2><b>Refill Alerts</b></h2>
                     <img src={Refill} style={{ width: "170px", height: "170px" }} />
-                    <p>
+                    <p className="p3-font">
                         Stay prepared with timely refill alerts that notify you when your medication supply is running low. MediSync helps you plan ahead by ensuring you never run out of essential prescriptions, giving you peace of mind to make arrangements for refills seamlessly. Take the guesswork out of managing your health and stay in control at all times.
                     </p>
                 </div>

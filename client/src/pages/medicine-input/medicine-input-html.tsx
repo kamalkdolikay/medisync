@@ -87,25 +87,25 @@ const MedicineInput = () => {
                 </div>
         <h2 className="text-center-title">Specify your medication</h2>
         <div className="form-group">
-          <label htmlFor="medicationName" className="form-label">
+          <label htmlFor="medicationName" className="p1-font">
             Medication Name:
           </label>
           <input type="text" id="medicationName" className="form-control" placeholder="Enter medication name"  />
         </div>
         <div className="form-group">
-          <label htmlFor="totalInHand" className="form-label">
+          <label htmlFor="totalInHand" className="p1-font">
             Total in hand:
           </label>
           <input type="number" id="totalInHand" className="form-control" min="0" />
         </div>
         <div className="form-group">
-          <label htmlFor="refillAlert" className="form-label">
+          <label htmlFor="refillAlert" className="p1-font">
             Refill alert amount:
           </label>
           <input type="number" id="refillAlert" className="form-control" min="0" />
         </div>
         <div className="form-group">
-          <label htmlFor="timesPerDay" className="form-label">
+          <label htmlFor="timesPerDay" className="p1-font">
             How many times a day?:
           </label>
           <div className="input-group">
@@ -119,7 +119,7 @@ const MedicineInput = () => {
           </div>
         </div>
         <div className="form-group">
-          <label htmlFor="pillsPerTime" className="form-label">
+          <label htmlFor="pillsPerTime" className="p1-font">
             How many pills one time?:
           </label>
           <input
