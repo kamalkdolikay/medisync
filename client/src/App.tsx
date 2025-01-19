@@ -8,6 +8,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import HomeComponent from "./pages/home/home-component";
 import MedicineInputComponent from './pages/medicine-input/medicine-input-component';
 import LandComponent from "./pages/land/land-component"; 
+import PrescriptionRequest from './pages/prescirption-request/prescirption-request-html';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/dashboard' element={<HomeComponent />} />
             <Route path='/' element={<LandComponent />} />
             <Route path='/medicine-input' element={<MedicineInputComponent/>} />
+            <Route path='/prescription-request' element={<PrescriptionRequest/>} />
         </Routes>
       </Router>
     </AuthProvider>
